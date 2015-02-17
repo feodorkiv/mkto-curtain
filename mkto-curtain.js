@@ -1,4 +1,4 @@
-//suppres list
+//suppres list -extended
 		var invalidaddress=new Array();
 		invalidaddress[0]="163";
 		invalidaddress[1]="mail";
