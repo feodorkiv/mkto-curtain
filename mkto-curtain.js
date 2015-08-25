@@ -15,14 +15,14 @@
 		invalidaddress[12]="urx7";
 		invalidaddress[13]="ymail";
 		invalidaddress[14]="trash-mail";
+		invalidaddress[15]="yahoo";
+		invalidaddress[16]="hotmail";
+		invalidaddress[17]="outlook";
+		invalidaddress[18]="aol";
 		//extend or shorten this list if neccessary
 		//curtain list
 		var curtainaddress = new Array();
-		curtainaddress[0]="outlook";
-		curtainaddress[1]="yahoo";
-		curtainaddress[2]="gmail";
-		curtainaddress[3]="aol";
-		curtainaddress[4]="hotmail";
+		curtainaddress[0]="gmail";
 		//extend or shorten this list if neccessary
 		var testresults;
 		var curtainTestResults;
