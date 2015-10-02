@@ -19,6 +19,7 @@
 		invalidaddress[16]="hotmail";
 		invalidaddress[17]="outlook";
 		invalidaddress[18]="aol";
+		invalidaddress[19]="mailinator";
 		//extend or shorten this list if neccessary
 		//curtain list
 		var curtainaddress = new Array();
