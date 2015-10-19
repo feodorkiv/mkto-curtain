@@ -20,6 +20,7 @@
 		invalidaddress[17]="outlook";
 		invalidaddress[18]="aol";
 		invalidaddress[19]="mailinator";
+		invalidaddress[20]="yopmail";
 		//extend or shorten this list if neccessary
 		//curtain list
 		var curtainaddress = new Array();
