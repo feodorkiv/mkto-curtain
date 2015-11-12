@@ -72,7 +72,7 @@
 		//api calls
 		//listen for the validate event
 	//check if object is there
-	if (MktoForms2) {
+	if (window.MktoForms2) {
 		MktoForms2.whenReady(function(form){
 		var submissionCounter = 0;
 		form.onValidate(function(){
