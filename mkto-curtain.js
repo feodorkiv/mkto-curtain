@@ -71,6 +71,8 @@
 
 		//api calls
 		//listen for the validate event
+	//check if object is there
+	if (typeof MktoForms2 != "undefined") {
 		MktoForms2.whenReady(function(form){
 		var submissionCounter = 0;
 		form.onValidate(function(){
@@ -98,4 +100,5 @@
 					}	
 				}	
 		});
-	});
+		});
+	};
