@@ -24,7 +24,9 @@
 		invalidaddress[21]="asdf";
 		invalidaddress[22]="optonline";
 		invalidaddress[23]="myself";
-		invalidaddress[23]="rogers";
+		invalidaddress[24]="rogers";
+		invalidaddress[25]="earthlink";
+		invalidaddress[26]="gmil";
 		//extend or shorten this list if neccessary
 		//curtain list
 		var curtainaddress = new Array();
