@@ -24,7 +24,7 @@ function detectViewerCountry() {
         avViewerCountry = jQuery.cookie('viewerCountry');
         setContactInfo();
     } else {
-        jQuery.get("http://api.hostip.info/country.php", function (response) {
+        jQuery.get("https://api.hostip.info/country.php", function (response) {
             if (response != 'XX') {
                 avViewerCountry = response;
                 jQuery.cookie('viewerCountry', avViewerCountry, {
@@ -33,7 +33,7 @@ function detectViewerCountry() {
                 setContactInfo();
             } else {
                 jQuery.ajax({
-                    url: "http://ipinfo.io",
+                    url: "https://ipinfo.io",
                     type: "GET",
                     dataType: "jsonp",
                     timeout: 1000,
