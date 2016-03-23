@@ -2,13 +2,13 @@
 
 //execute phone change 
 $(document).ready(function(){
-    gatherMetaVariables();
+    gatherMetaVariablesPhone();
     detectViewerCountry();
 });
 
 
 //meta vars 
-function gatherMetaVariables() {
+function gatherMetaVariablesPhone() {
     avForceViewerCountry = $('head meta[name=forceViewerCountry]').attr('content');
 }
 
@@ -86,6 +86,8 @@ function setContactInfo() {
 	var phone_number;
 
     switch (avViewerCountry) {
+	case "RU":
+		phone_number = "66-11-11";
     case "US":
     case "CA":
     case "MX":
@@ -126,6 +128,5 @@ function setContactInfo() {
         break;
     } 
     
-    $('.av-phone-href').attr("href", "tel:" + phone_number);
-    $('.av-phone-number').text(phone_number);
+    $('.InfinityNumber').text(phone_number);
 }
