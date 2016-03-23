@@ -1,7 +1,7 @@
 
 
 //execute phone change 
-$(document).ready(function(){
+jQuery(document).ready(function(){
     gatherMetaVariablesPhone();
     detectViewerCountry();
 });
@@ -9,7 +9,7 @@ $(document).ready(function(){
 
 //meta vars 
 function gatherMetaVariablesPhone() {
-    avForceViewerCountry = $('head meta[name=forceViewerCountry]').attr('content');
+    avForceViewerCountry = jQuery('head meta[name=forceViewerCountry]').attr('content');
 }
 
 //detect country function
@@ -20,26 +20,26 @@ function detectViewerCountry() {
     if ( avForceViewerCountry ) {
         avViewerCountry = avForceViewerCountry;
         setContactInfo();
-    } else if ($.cookie('viewerCountry')) {
-        avViewerCountry = $.cookie('viewerCountry');
+    } else if (jQuery.cookie('viewerCountry')) {
+        avViewerCountry = jQuery.cookie('viewerCountry');
         setContactInfo();
     } else {
-        $.get("http://api.hostip.info/country.php", function (response) {
+        jQuery.get("http://api.hostip.info/country.php", function (response) {
             if (response != 'XX') {
                 avViewerCountry = response;
-                $.cookie('viewerCountry', avViewerCountry, {
+                jQuery.cookie('viewerCountry', avViewerCountry, {
 					expires: 7
                 });
                 setContactInfo();
             } else {
-                $.ajax({
+                jQuery.ajax({
                     url: "http://ipinfo.io",
                     type: "GET",
                     dataType: "jsonp",
                     timeout: 1000,
                     success: function (response) {
                         avViewerCountry = response.country;
-                        $.cookie('viewerCountry', avViewerCountry, {
+                        jQuery.cookie('viewerCountry', avViewerCountry, {
                             expires: 7
                         });
                         setContactInfo();
@@ -69,7 +69,7 @@ function detectViewerCountry() {
                             avViewerCountry = "US";
                             break;
                         }
-                        $.cookie('viewerCountry', avViewerCountry, {
+                        jQuery.cookie('viewerCountry', avViewerCountry, {
                               expires: 7
                           });
                           setContactInfo();
@@ -128,5 +128,5 @@ function setContactInfo() {
         break;
     } 
     
-    $('.InfinityNumber').text(phone_number);
+    jQuery('.InfinityNumber').text(phone_number);
 }
