@@ -24,9 +24,9 @@ function detectViewerCountry() {
         avViewerCountry = jQuery.cookie('viewerCountry');
         setContactInfo();
     } else {
-        jQuery.get("//ip-api.com/json", function (response) {
+        jQuery.getJSON("https://ipinfo.io", function (response) {
             if (response != 'XX') {
-                avViewerCountry = response.countryCode;
+                avViewerCountry = response.country;
                 jQuery.cookie('viewerCountry', avViewerCountry, {
 					expires: 7
                 });
