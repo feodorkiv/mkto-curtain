@@ -24,16 +24,8 @@ function detectViewerCountry() {
         avViewerCountry = jQuery.cookie('viewerCountry');
         setContactInfo();
     } else {
-        jQuery.getJSON("https://ipinfo.io", function (response) {
-            if (response != 'XX') {
-                avViewerCountry = response.country;
-                jQuery.cookie('viewerCountry', avViewerCountry, {
-					expires: 7
-                });
-                setContactInfo();
-            } else {
                 jQuery.ajax({
-                    url: "https://ipinfo.io",
+                    url: "https://ipinfo.io?token=54f3878868923d",
                     type: "GET",
                     dataType: "jsonp",
                     timeout: 1000,
@@ -76,9 +68,7 @@ function detectViewerCountry() {
                     }
                 });
             }
-        }, "text");
-    }
-}
+    };
 
 
 //change phone number
