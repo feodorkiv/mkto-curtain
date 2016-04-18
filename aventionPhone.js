@@ -80,6 +80,7 @@ function setContactInfo() {
     switch (avViewerCountry) {
 	case "RU":
 		phone_number = "66-11-11";
+		break;
     case "US":
     case "CA":
     case "MX":
