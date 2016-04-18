@@ -81,12 +81,12 @@ function setContactInfo() {
     case "US":
     case "CA":
     case "MX":
-        phone_number = ((avUSphone) ? avUSphone : "877.621.7270");
+        phone_number = "877.621.7270";
         break;
     case "UK":
     case "GB":
     case "IE":
-        phone_number = ((avUKphone) ? avUKphone : "+44 (0) 20 7382 8800");
+        phone_number = "+44 (0) 20 7382 8800";
         anglicise();
         break;
     case "AU":
