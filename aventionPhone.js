@@ -34,6 +34,7 @@ function detectViewerCountry() {
                         jQuery.cookie('viewerCountry', avViewerCountry, {
                             expires: 7
                         });
+						console.log(avViewerCountry);
                         setContactInfo();
 						},
                     error: function (response) {
@@ -73,6 +74,7 @@ function detectViewerCountry() {
 
 //change phone number
 function setContactInfo() {
+	
 	var phone_number;
 
     switch (avViewerCountry) {
