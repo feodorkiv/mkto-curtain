@@ -79,9 +79,12 @@ function setContactInfo() {
 
     switch (avViewerCountry) {
 	case "RU":
-		phone_number = "66-11-11";
+		phone_number = "Russia Phone Number";
 		break;
     case "US":
+		phone_number = "US phone number";
+		break;
+	/*	
     case "CA":
     case "MX":
         phone_number = "877.621.7270";
@@ -115,9 +118,9 @@ function setContactInfo() {
         phone_number = "+852 81009648";
         anglicise();
         break;
+	*/	
     default:
         phone_number = "+44 (0) 20 7382 8800";
-        anglicise();
         break;
     } 
     
