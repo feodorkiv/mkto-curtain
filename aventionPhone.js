@@ -53,12 +53,12 @@ function detectViewerCountry() {
 function setContactInfo() {
 	
 	var phone_number;
-	var USPhoneNumber = 'US Phone';
-	var UKPhoneNumber = 'UK Phone';
-	var IndiaPhoneNumber = 'India Phone';
-	var SingaporePhoneNumber = 'Singapore Phone';
-	var AustraliaPhoneNumber ='Australia Phone';
-
+	var USPhoneNumber = 'US Phone +1 (855) 653-5627';
+	var UKPhoneNumber = 'UK Phone +1 (855) 653-5627';
+	var IndiaPhoneNumber = 'India Phone +91 124 4934700';
+	var SingaporePhoneNumber = 'Singapore Phone +65 62217920';
+	var AustraliaPhoneNumber ='Australia Phone +61 (0)2 9004 7868';
+	var HongKongPhoneNumber='HongKong Phone +852 8100 9648';
 	
 	/*using case for the case (lol) when we will need special number for certain country*/
     switch (avViewerCountry) {		
@@ -516,7 +516,7 @@ function setContactInfo() {
 		phone_number = SingaporePhoneNumber;
 		break;
 	case "HK": /*Hong Kong*/
-		phone_number = SingaporePhoneNumber;
+		phone_number = HongKongPhoneNumber;
 		break;
 	case "TM":
 		phone_number = SingaporePhoneNumber;
