@@ -2,7 +2,6 @@
 
 //execute phone change 
 jQuery(document).ready(function(){
-    gatherMetaVariablesPhone();
     detectViewerCountry();
 });
 
