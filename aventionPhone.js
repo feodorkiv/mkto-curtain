@@ -7,27 +7,18 @@ jQuery(document).ready(function(){
 });
 
 
-//meta vars 
-function gatherMetaVariablesPhone() {
-    avForceViewerCountry = jQuery('head meta[name=forceViewerCountry]').attr('content');
-}
-
 //detect country function
 // First we see if we have a cookie
 // then we check with ipinfo.io 
 function detectViewerCountry() {
-    if ( avForceViewerCountry ) {
-        avViewerCountry = avForceViewerCountry;
-        setContactInfo();
-    } else if (jQuery.cookie('viewerCountry')) {
+     if (jQuery.cookie('viewerCountry')) {
         avViewerCountry = jQuery.cookie('viewerCountry');
         setContactInfo();
     } else {
                 jQuery.ajax({
                     url: "https://ipinfo.io?token=54f3878868923d",
                     type: "GET",
-                    dataType: "jsonp",
-                    timeout: 1000,
+                    dataType: "json",
                     success: function (response) {
                         avViewerCountry = response.country;
                         jQuery.cookie('viewerCountry', avViewerCountry, {
@@ -38,11 +29,7 @@ function detectViewerCountry() {
 						},
                     error: function (response) {
 						//default phone
-                        avViewerCountry = "US";
-                        jQuery.cookie('viewerCountry', avViewerCountry, {
-                              expires: 7
-                          });
-                          setContactInfo();
+						console.log('ipinfo error');
                     }
                 });
             }
