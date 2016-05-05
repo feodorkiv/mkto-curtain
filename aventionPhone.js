@@ -10,10 +10,11 @@ jQuery(document).ready(function(){
 // First we see if we have a cookie
 // then we check with ipinfo.io 
 function detectViewerCountry() {
-     if (jQuery.cookie('viewerCountry')) {
+	/*disabling cookie check for debug*/
+    /* if (jQuery.cookie('viewerCountry')) {
         avViewerCountry = jQuery.cookie('viewerCountry');
         setContactInfo();
-    } else {
+    } else {*/
                 jQuery.ajax({
                     url: "https://ipinfo.io?token=54f3878868923d",
                     type: "GET",
@@ -31,7 +32,7 @@ function detectViewerCountry() {
 						console.log('ipinfo error');
                     }
                 });
-            }
+           /* } */
     };
 
 
