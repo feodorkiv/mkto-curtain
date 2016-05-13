@@ -10,29 +10,28 @@ jQuery(document).ready(function(){
 // First we see if we have a cookie
 // then we check with ipinfo.io 
 function detectViewerCountry() {
-	/*disabling cookie check for debug*/
-    /* if (jQuery.cookie('viewerCountry')) {
-        avViewerCountry = jQuery.cookie('viewerCountry');
+	/*cookie check*/
+    if (jQuery.cookie('viewerCountry')) {
+        avViewerCountry = jQuery.cookie('viewerCountryNew');
         setContactInfo();
-    } else {*/
+    } else {
                 jQuery.ajax({
                     url: "https://ipinfo.io?token=54f3878868923d",
                     type: "GET",
                     dataType: "json",
                     success: function (response) {
                         avViewerCountry = response.country;
-                        jQuery.cookie('viewerCountry', avViewerCountry, {
+                        jQuery.cookie('viewerCountryNew', avViewerCountry, {
                             expires: 7
                         });
-						console.log(avViewerCountry);
                         setContactInfo();
 						},
                     error: function (response) {
 						//default phone
-						console.log('ipinfo error');
+						avViewerCountry = "UK";
                     }
                 });
-           /* } */
+            } 
     };
 
 
@@ -40,12 +39,12 @@ function detectViewerCountry() {
 function setContactInfo() {
 	
 	var phone_number;
-	var USPhoneNumber = 'US Phone +1 (855) 653-5627';
-	var UKPhoneNumber = 'UK Phone +1 (855) 653-5627';
-	var IndiaPhoneNumber = 'India Phone +91 124 4934700';
-	var SingaporePhoneNumber = 'Singapore Phone +65 62217920';
-	var AustraliaPhoneNumber ='Australia Phone +61 (0)2 9004 7868';
-	var HongKongPhoneNumber='HongKong Phone +852 8100 9648';
+	var USPhoneNumber = '+1 (855) 653-5627';
+	var UKPhoneNumber = '+1 (855) 653-5627';
+	var IndiaPhoneNumber = '+91 124 4934700';
+	var SingaporePhoneNumber = '+65 62217920';
+	var AustraliaPhoneNumber ='+61 (0)2 9004 7868';
+	var HongKongPhoneNumber='+852 8100 9648';
 	
 	/*using case for the case (lol) when we will need special number for certain country*/
     switch (avViewerCountry) {		
@@ -565,5 +564,5 @@ function setContactInfo() {
         break;
     } 
     
-    jQuery('.InfinityNumber').append('<div class="aventionPhone">'+phone_number+'</div>');
+    jQuery('.InfinityNumber').text(phone_number);
 }
