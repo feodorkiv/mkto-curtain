@@ -39,7 +39,7 @@ function detectViewerCountry() {
 function setContactInfo() {
 	
 	var phone_number;
-	var USPhoneNumber = '+1 (855) 653-5627';
+	var USPhoneNumber = '1 (855) 361-4001';
 	var UKPhoneNumber = '+44 (0) 207 382 8800';
 	var IndiaPhoneNumber = '+91 124 4934700';
 	var SingaporePhoneNumber = '+65 62217920';
