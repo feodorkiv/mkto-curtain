@@ -12,7 +12,7 @@ jQuery(document).ready(function(){
 function detectViewerCountry() {
 	/*cookie check*/
     if (jQuery.cookie('viewerCountry')) {
-        avViewerCountry = jQuery.cookie('viewerCountryNew');
+        avViewerCountry = jQuery.cookie('viewerCountryNewv1');
         setContactInfo();
     } else {
                 jQuery.ajax({
@@ -21,7 +21,7 @@ function detectViewerCountry() {
                     dataType: "json",
                     success: function (response) {
                         avViewerCountry = response.country;
-                        jQuery.cookie('viewerCountryNew', avViewerCountry, {
+                        jQuery.cookie('viewerCountryNewv1', avViewerCountry, {
                             expires: 7
                         });
                         setContactInfo();
