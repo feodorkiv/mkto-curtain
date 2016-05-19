@@ -40,7 +40,7 @@ function setContactInfo() {
 	
 	var phone_number;
 	var USPhoneNumber = '+1 (855) 653-5627';
-	var UKPhoneNumber = '+1 (855) 653-5627';
+	var UKPhoneNumber = 'UK +1 (855) 653-5627';
 	var IndiaPhoneNumber = '+91 124 4934700';
 	var SingaporePhoneNumber = '+65 62217920';
 	var AustraliaPhoneNumber ='+61 (0)2 9004 7868';
