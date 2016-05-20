@@ -564,5 +564,6 @@ function setContactInfo() {
         break;
     } 
     
-    jQuery('.InfinityNumber').text(phone_number);
+    jQuery('.InfinityNumber').not('.clickable').text(phone_number);
+	jQuery('.InfinityNumber.clickable a').atrr('href','tel:'+phone_number).text(phone_number);
 }
