@@ -76,6 +76,7 @@
 	//check if object is there
 	if (window.MktoForms2) {
 		MktoForms2.whenReady(function(form){
+			
 		var submissionCounter = 0;
 		form.onValidate(function(){
 			var vals = form.vals();
@@ -103,11 +104,15 @@
 				}	
 		});
 		
+		//client ID field
+		var tracker = ga.getAll()[0];
+		var gaCookieID = tracker.get('clientId');
+		jQuery('input[name=Cookie_ID__c]').val(gaCookieID);
+		
 		//onSuccess event for tracking
+		
 		form.onSuccess(function(){			
 		
-			var tracker = ga.getAll()[0];
-			tracker.get('clientId');
 			dataLayer.push({'event': 'formSubmitted'});		
 			
 		});
