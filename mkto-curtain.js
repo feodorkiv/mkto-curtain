@@ -27,6 +27,7 @@
 		invalidaddress[24]="rogers";
 		invalidaddress[25]="earthlink";
 		invalidaddress[26]="gmil";
+		invalidaddress[27]="test";
 		//extend or shorten this list if neccessary
 		//curtain list
 		var curtainaddress = new Array();
@@ -94,7 +95,7 @@
 						form.submittable(false);
 						//Show error message, pointed at email element
 						var emailElement = form.getFormElem().find("#Email");
-						form.showErrorMessage("Please enter a business email" , emailElement);
+						form.showErrorMessage("Please enter a business email to serve you better." , emailElement);
 						submissionCounter++;
 						console.log(submissionCounter);
 					}else {
